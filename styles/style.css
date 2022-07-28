@@ -1,77 +1,8 @@
 html {
   font-size: 10px;
-  font-family: 'Oswald', 'Nunito', sans-serif; 
+  font-family:  'Nunito','Oswald', sans-serif; 
 }
-body {
-  max-width: 950px;
-  margin: 0 auto;
-}
-span#category {
-  font-family: cursive;
-  color: white;
-  background-color: #E7215A;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 3px 5px;
-}
-h1 {
-  font-family: 'Oswald', fantasy;
-  font-size: 6rem;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0px;
-  width: 530px;
-  line-height: 5.5rem;
-  margin: 0 auto;
-}
-h2 {
-  font-family: 'Nunito', cursive;
-  font-size: 20px;
-  text-align: center;
-  font-weight: normal;
-} 
-div.author span {
-  color: #E7215A;
-  font-weight: bold;
-}
-div.author {
-  font-size: 15px;
-  text-align: center;
-  position: relative;
-}
-div.author::before { 
-  position: absolute;  
-  content: "";
-  border-bottom: 2px dashed;
-  width: 350px;
-  margin: 10px 0 0 -360px;
-  color: #706F6F;
-}
-div.author::after { 
-  position: absolute;  
-  content: "";
-  border-bottom: 2px dashed;
-  width: 350px;
-  margin: 10px 0 0 5px;
-  color: #706F6F;
-}
-.article-content{
-  overflow: auto;
-  }
-.caption-pictures {
-  color: #706F6F;
-  font-family: 'Oswald', fantasy;
-  font-size: 10px;
-}
-div.image-container:first-child { 
-border-bottom: 1px dashed;
-padding-bottom: 15px;
-}
-h3 {
-  font-family: Oswald, fantasy;
-  font-size: 20px;
-  text-align: left;
-}
+
 @font-face {
   font-family: 'oswaldregular';
   src: url('oswald-variablefont_wght-webfont.woff2') format('woff2'),
@@ -79,26 +10,127 @@ h3 {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'nunitoextralight';
+  src: url('nunito-variablefont_wght-webfont.woff2') format('woff2'),
+       url('nunito-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.category {
+  font-family: 'cursive';
+  color: white;
+  background-color: #E7215A;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 3px 5px;
+  display: inline-block;
+  margin-bottom: 150px;
+}
+
+h1 {
+  font-family: 'Oswald', 'fantasy';
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 530px;
+  line-height: 60px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+} 
+
+.author span {
+  font-family: 'Oswald', 'fantasy';
+  color: #E7215A;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.author::before { 
+  position: absolute;  
+  content: "";
+  border-bottom: 2px dashed #7e7e7e;
+  width: 350px;
+  left: 0;
+  top: 50%;
+}
+
+.author::after { 
+  position: absolute;  
+  content: "";
+  border-bottom: 2px dashed #7e7e7e;
+  width: 350px;
+  right: 0;
+  top: 50%;
+}
+
+.article-content {
+  overflow: auto;
+}
+
+.caption-pictures {
+  color: #706F6F;
+  font-family: 'Oswald', 'fantasy';
+  font-size: 10px;
+  padding-left: 15px;
+}
+
+.caption-pictures::before { 
+  position: absolute;  
+  content: "";
+  border-radius: 1px;
+  width: 8px;
+  height: 8px;
+  background-color: #E7215A;
+  top: 4px;
+  left: 0px;
+}
+
+.image-container:first-child { 
+  border-bottom: 1px dashed;
+  padding-bottom: 15px;
+}
+
+h3 {
+  font-family: 'Oswald', 'fantasy';
+  font-size: 20px;
+  text-align: left;
+}
+
+ul {
+  padding-left: 15px;
+}
+
 p, li {
-  font-family: 'Nunito', system-ui;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 1px;
   text-align: left;
-  }
-@font-face {
-    font-family: 'nunitoextralight';
-    src: url('nunito-variablefont_wght-webfont.woff2') format('woff2'),
-         url('nunito-variablefont_wght-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }
+
 li {
   position: relative;
   margin-top: 20px;
-  list-style-position: outside;
   list-style-type: none;
 }
+
  li::before { 
   position: absolute;  
   content: "";
@@ -106,9 +138,11 @@ li {
   width: 8px;
   height: 8px;
   background-color: #E7215A;
-  margin: 9px 0 0 -12px;    
+  top: 9px;
+  left: -15px;
 }
-p.editor-note::first-letter {
+
+.editor-note::first-letter {
   font-family: 'Oswald', system-ui;
   float: left;
   font-weight: bold;
@@ -119,19 +153,32 @@ p.editor-note::first-letter {
   background-color: black;
   margin-right: 10px;
 }
+
 .column {
   float: left;
   width: 33.33%;
   box-sizing: border-box;
   min-height: 100%;
-  padding: 0px 15px;
+  padding: 0 15px;
 }
-.column:not(:last-child) {
-  border-right: 1px dashed; 
+
+.column:first-child {
+  padding: 0 15px 0 0;
 }
+
+.column:last-child {
+  padding: 0 0 0 15px;
+}
+
+.column:nth-child(2) {
+  border-right: 1px dashed #7e7e7e; 
+  border-left: 1px dashed #7e7e7e;
+}
+
 .footer {
- font-size: 15px;
+  font-size: 15px;
 }
+
 .footer span {
- margin-right: 15px;
+  margin-right: 15px;
 }
